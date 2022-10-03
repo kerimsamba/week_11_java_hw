@@ -27,37 +27,17 @@ public class TestFlightManager {
         ArrayList<Passenger> passengers = new ArrayList<Passenger>();
 
         flight = new Flight(pilot,
-                crew,
-                passengers,
                 Plane.Cessna172,
                 "G32",
                 "Mallorca",
-                "Glasgow Airport",
-                2022/09/25);
+                "Glasgow",
+                "01/11/2022");
 
-    }
-
-//    @Test
-//    public void baggageWeightRequired(){
-//        assertEquals(15, passenger1.getPassengerTotalBaggageWeight());
-//    }
-
-    @Test
-    public void baggageWeightForPassenger(){
-        assertEquals(15, getTotalBagsWeight(passenger1));
     }
 
     @Test
-    public void baggageWeightBooked(){
-        flight.addPassenger(passenger1);
-        flight.addPassenger(passenger2);
-//        int weightBookedOn = getWeightOfBaggageBookedOnFlight(flight.passengers);
-      int weightBookedOn = 20;
-
-        assertEquals(20, weightBookedOn);
+    public void baggageWeightRequired() {
+        assertEquals(15, passenger1.getPassengerTotalBaggageWeight());
     }
+
 }
-
-//    calculate how much baggage weight should be reserved for each passenger for a flight
-//    calculate how much baggage weight is booked by passengers of a flight
-//    calculate how much overall weight reserved for baggage remains for a flight

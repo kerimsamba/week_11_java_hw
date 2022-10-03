@@ -8,11 +8,5 @@ public class FlightManager {
         return passenger.getNumOfBags() * 5;
     }
 
-//    public int getWeightOfBaggageBookedOnFlight(ArrayList<Passenger> passengers){
-//        int baggageWeightBooked = 0;
-//        for (Passenger passenger: passengers){
-//            baggageWeightBooked += passenger.getPassengerTotalBaggageWeight();
-//        }
-//        return baggageWeightBooked;
-//    }
+
 }

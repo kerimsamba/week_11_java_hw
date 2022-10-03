@@ -1,21 +1,20 @@
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Flight {
 
     private Pilot pilot;
     private ArrayList<CabinCrewMember> cabinCrew;
-    ArrayList<Passenger> passengers;
+    private ArrayList<Passenger> passengers;
     private Plane plane;
     private String flightnumber;
     private String destination;
     private String departureairport;
-    private LocalDate departuredate;
+    private String departuredate;
 
-    public Flight(Pilot pilot, ArrayList<CabinCrewMember> cabinCrew, ArrayList<Passenger> passengers, Plane plane, String flightnumber, String destination, String departureairport, LocalDate departuredate) {
+    public Flight(Pilot pilot, Plane plane, String flightnumber, String destination, String departureairport, String departuredate) {
         this.pilot = pilot;
-        this.cabinCrew = cabinCrew;
-        this.passengers = passengers;
+        this.cabinCrew = new ArrayList<CabinCrewMember>();
+        this.passengers = new ArrayList<Passenger>();
         this.plane = plane;
         this.flightnumber = flightnumber;
         this.destination = destination;
@@ -51,7 +50,7 @@ public class Flight {
         this.departureairport = departureairport;
     }
 
-    public void setDepartureTime(String departureTime) {
+    public void setDepartureDate(String departureDate) {
         this.departuredate = departuredate;
     }
 
@@ -87,7 +86,7 @@ public class Flight {
         return departureairport;
     }
 
-    public LocalDate getDepartureTime() {
+    public String getDepartureDate() {
         return departuredate;
     }
 }
